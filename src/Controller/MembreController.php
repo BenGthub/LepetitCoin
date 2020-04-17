@@ -59,7 +59,7 @@ class MembreController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="membre_show", methods={"GET"})
+     * @Route("/{id}", name="membre_show", methods={"GET"},requirements={"id"="\d+"})
      */
     public function show(Membre $membre): Response
     {
@@ -69,7 +69,7 @@ class MembreController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/edit", name="membre_edit", methods={"GET","POST"})
+     * @Route("/{id}/edit", name="membre_edit", methods={"GET","POST"},requirements={"id"="\d+"})
      */
     public function edit(Request $request, Membre $membre): Response
     {
@@ -89,7 +89,8 @@ class MembreController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="membre_delete", methods={"DELETE"})
+     * @Route("/{id}", name="membre_delete", methods={"DELETE"},requirements={"id"="\d+"})
+
      */
     public function delete(Request $request, Membre $membre): Response
     {
@@ -107,7 +108,8 @@ class MembreController extends AbstractController
      */
     public function profil(MembreRepository $mr): Response
     {
-        return $this->render('membre/profil.html.twig');
+        return $this->render('membre/profil.html.twig'
+                );
     }
     
     
