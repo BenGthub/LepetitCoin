@@ -8,12 +8,12 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
+               {# <th>Id</th>#}
                 <th>Titre</th>
                 <th>Description_courte</th>
-                <th>Description_longue</th>
+               {# <th>Description_longue</th>#}
                 <th>Prix</th>
-                <th>Adresse</th>
+                {#<th>Adresse</th>#}
                 <th>Ville</th>
                 <th>Cp</th>
                 <th>Pays</th>
@@ -25,20 +25,20 @@
         <tbody>
         {% for annonce in annonces %}
             <tr>
-                <td>{{ annonce.id }}</td>
+               {# <td>{{ annonce.id }}</td>#}
                 <td>{{ annonce.titre }}</td>
                 <td>{{ annonce.descriptionCourte }}</td>
-                <td>{{ annonce.descriptionLongue }}</td>
+                {#<td>{{ annonce.descriptionLongue }}</td>#}
                 <td>{{ annonce.prix }}</td>
-                <td>{{ annonce.adresse }}</td>
+                {#<td>{{ annonce.adresse }}</td>#}
                 <td>{{ annonce.ville }}</td>
                 <td>{{ annonce.cp }}</td>
                 <td>{{ annonce.pays }}</td>
                 <td><img class="img-thumbnail" src="{{ asset("images/" ~ annonce.photo.photo1) }}"></td>
                 <td>{{ annonce.dateEnregistrement ? annonce.dateEnregistrement|date('Y-m-d H:i:s') : '' }}</td>
                 <td>
-                    <a href="{{ path('annonce_show', {'id': annonce.id}) }}">show</a>
-                    <a href="{{ path('annonce_edit', {'id': annonce.id}) }}">edit</a>
+                    <a href="{{ path('annonce_show', {'id': annonce.id}) }}"><i class="fas fa-info-circle">Détails</i></a>
+                   {# <a href="{{ path('annonce_edit', {'id': annonce.id}) }}">edit</a>#}
                 </td>
             </tr>
         {% else %}

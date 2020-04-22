@@ -4,9 +4,12 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/src/Form/RegistrationFormType.php</file>
+            <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/config/services.yaml</file>
+            <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/src/Controller/RegistrationController.php</file>
             <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/templates/membre/edit.html.twig</file>
             <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/templates/commentaire/index.html.twig</file>
             <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/src/Controller/AccueilController.php</file>
+            <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/config/packages/routing.yaml</file>
             <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/templates/annonce/edit.html.twig</file>
             <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/src/Controller/AnnonceController.php</file>
             <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/src/Controller/CategorieController.php</file>
@@ -28,6 +31,7 @@
             <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/templates/membre/_form.html.twig</file>
             <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/src/Entity/Categorie.php</file>
             <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/templates/commentaire/new.html.twig</file>
+            <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/src/Controller/CommentaireController.php</file>
             <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/src/Repository/AnnonceRepository.php</file>
             <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/templates/membre/new.html.twig</file>
             <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/templates/membre/profil.html.twig</file>
@@ -42,6 +46,7 @@
             <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/templates/membre/show.html.twig</file>
             <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/templates/membre/index.html.twig</file>
             <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/src/Form/MembreType.php</file>
+            <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/config/packages/security.yaml</file>
             <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/src/Repository/MembreRepository.php</file>
             <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/config/packages/doctrine.yaml</file>
             <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/templates/accueil/index.html.twig</file>

@@ -1,9 +1,11 @@
 <?php
 
 namespace App\Controller;
+
 use App\Entity\Categorie;
 use App\Entity\Album;
 use App\Entity\Annonce;
+use App\Entity\Membre;
 use App\Form\AnnonceType;
 use App\Form\AjouterType;
 use App\Repository\AnnonceRepository;
@@ -14,13 +16,12 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Doctrine\ORM\EntityManagerInterface as EntityManager;
-
-
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
 class AnnonceController extends AbstractController {
 
     /**
-     * @Route("/", name="annonce_index", methods={"GET"})
+     * @Route("/", name="annonce_index")
      */
     public function index(AnnonceRepository $annonceRepository): Response {
         return $this->render('annonce/index.html.twig', [
@@ -48,7 +49,7 @@ class AnnonceController extends AbstractController {
             // on enregistre le fichier téléchargé dans le dossier images
             $photo->move($this->getParameter("dossier_images"), $nomFichier);
             $em->flush();
-            
+
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($annonce, $chargerPhoto);
             $entityManager->flush();
@@ -102,37 +103,31 @@ class AnnonceController extends AbstractController {
 
         return $this->redirectToRoute('annonce_index');
     }
-    
-    
-
-    
 
     /**
-     * @Route("/membre/annonce/ajouter", name="Page_Annonce", methods={"GET", "POST"})
+     * @Route("/annonce/membre/ajouter", name="Page_Annonce", methods={"GET", "POST"})
+     * @IsGranted("IS_AUTHENTICATED_FULLY")
      */
-    public function ajouter(AlbumRepository $al, EntityManager $em, Request $rq,AnnonceRepository $ar) {
+    public function ajouter(AlbumRepository $al, EntityManager $em, Request $rq, AnnonceRepository $ar) {
         $annonce = new Annonce();
         $chargerPhoto = new Album;
-        
+
         $formAjouter = $this->createForm(AjouterType::class, $annonce);
         $formAjouter->handleRequest($rq);
         if ($formAjouter->isSubmitted()) {
             if ($formAjouter->isValid()) {
-                for($i=1; $i<=5; $i++){
-                $photo = $formAjouter->get("photo".$i)->getData();
+                for ($i = 1; $i <= 5; $i++) {
+                    $photo = $formAjouter->get("photo" . $i)->getData();
                     if ($photo) {
-                    $nomFichier = pathinfo($photo->getClientOriginalName(), PATHINFO_FILENAME);
-                    $nomFichier .= uniqid();
-                    $nomFichier .= "." . $photo->getExtension();
-                    $nomFichier = str_replace(" ", "_", $nomFichier);
-                    // on enregistre le fichier téléchargé dans le dossier images
-                    $photo->move($this->getParameter("dossier_images"), $nomFichier);
-                    $setter ="setPhoto".$i;
-                    $chargerPhoto->$setter($nomFichier);
-                    
-                    
+                        $nomFichier = pathinfo($photo->getClientOriginalName(), PATHINFO_FILENAME);
+                        $nomFichier .= uniqid();
+                        $nomFichier .= "." . $photo->getExtension();
+                        $nomFichier = str_replace(" ", "_", $nomFichier);
+                        // on enregistre le fichier téléchargé dans le dossier images
+                        $photo->move($this->getParameter("dossier_images"), $nomFichier);
+                        $setter = "setPhoto" . $i;
+                        $chargerPhoto->$setter($nomFichier);
                     }
-
                 }
                 $annonce->setPhoto($chargerPhoto);
                 $annonce->setDateEnregistrement(new \DateTime());
@@ -140,14 +135,22 @@ class AnnonceController extends AbstractController {
                 $em->persist($annonce);
                 $em->flush();
                 $this->addFlash("success", "Votre Annonce à bien été rajouter");
-                return $this->redirectToRoute("accueil");
-               
+
+
+                if ($this->container->get('security.authorization_checker')->isGranted('ROLE_ADMIN')) {
+                    return $this->redirectToRoute("accueil");
+                } else {
+                    return $this->redirectToRoute("annonce_index");
+                }
+
+//
+//                return $this->redirectToRoute("accueil");
             }
         }
-         return $this->render('annonce/new.html.twig', [
-                            'annonce' => $annonce,
-                            'form' => $formAjouter->createView(),
-                ]);
+        return $this->render('annonce/new.html.twig', [
+                    'annonce' => $annonce,
+                    'form' => $formAjouter->createView(),
+        ]);
     }
 
 }
