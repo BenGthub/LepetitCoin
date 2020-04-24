@@ -36,9 +36,15 @@
                 <th>Telephone</th>
                 <td>{{ app.user.telephone }}</td>
             </tr>
-            <tr>
+{#            {% for annonce in app.user.annonces %}
+                <tr>
+                    <td>{{ annonce.dateEnregistrement|date("d/m/Y") }}</td>
+                    <td>{{ annonce.prix }}</td>
+                    <td>{{ annonce.adresse }}</td>
+                </tr>
+            {% endfor %}#}
 
-            </tr>
+
         </tbody>
     </table>
 

@@ -1,0 +1,16 @@
+<div class="card">
+
+{#  {% if categorie.annonce.photo.photo1 is not null %}
+    <img class="car-img-top" src="{{ asset(url_images ~ categorie.annonce.photo.photo1) }}">
+  {% endif %}
+    #}
+    
+    
+  <div class="card-body">
+    <h4 class="card-title">{{ categorie.titre }}</h4>
+    <p class="card-text">{{ categorie.motscles }}</p>
+
+    
+  </div>
+</div>
+

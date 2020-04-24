@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Membre;
 use App\Form\MembreType;
 use App\Repository\MembreRepository;
+use App\Repository\AnnonceRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -90,7 +91,6 @@ class MembreController extends AbstractController
 
     /**
      * @Route("/{id}", name="membre_delete", methods={"DELETE"},requirements={"id"="\d+"})
-
      */
     public function delete(Request $request, Membre $membre): Response
     {
@@ -103,15 +103,17 @@ class MembreController extends AbstractController
         return $this->redirectToRoute('membre_index');
     }
     
-        /**
+     /**
      * @Route("/profil", name="profil", methods={"GET"})
      */
-    public function profil(MembreRepository $mr): Response
+    public function profil(MembreRepository $mr,AnnonceRepository $ar): Response
     {
-        return $this->render('membre/profil.html.twig'
+        return $this->render('membre/profil.html.twig',[
+            'annonces'=>$ar->findAll(),
+        ]
                 );
     }
     
-    
+
     
 }

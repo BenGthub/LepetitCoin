@@ -22,19 +22,19 @@ class AjouterType extends AbstractType
         $builder
             ->add('titre',TextType::class, [ "constraints" => 
                                                     [ new Length([ "max" => 50,
-                                                                   "maxMessage" => "Le nom de l'auteur ne peut pas dépasser 20 caractères"
+                                                                   "maxMessage" => "Le titre ne peut pas dépasser 20 caractères"
                                                                  ]) 
                                                     ] 
                                                  ])
             ->add('description_courte',TextType::class, [ "constraints" => 
                                                     [ new Length([ "max" => 200,
-                                                                   "maxMessage" => "Le nom de l'auteur ne peut pas dépasser 20 caractères"
+                                                                   "maxMessage" => "Le texte ne peut pas dépasser 20 caractères"
                                                                  ]) 
                                                     ] 
                                                  ])
             ->add('description_longue', TextType::class, [ "constraints" => 
-                                                    [ new Length([ "max" => 255,
-                                                                   "maxMessage" => "Le nom de l'auteur ne peut pas dépasser 20 caractères"
+                                                    [ new Length([ "max" => 600,
+                                                                   "maxMessage" => "Le ntexte ne peut pas dépasser 400 caractères"
                                                                  ]) 
                                                     ] 
                                                  ])

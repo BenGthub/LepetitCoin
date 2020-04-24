@@ -6,51 +6,53 @@
             <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/src/Form/RegistrationFormType.php</file>
             <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/config/services.yaml</file>
             <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/src/Controller/RegistrationController.php</file>
-            <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/templates/membre/edit.html.twig</file>
             <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/templates/commentaire/index.html.twig</file>
             <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/src/Controller/AccueilController.php</file>
             <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/config/packages/routing.yaml</file>
             <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/templates/annonce/edit.html.twig</file>
-            <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/src/Controller/AnnonceController.php</file>
-            <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/src/Controller/CategorieController.php</file>
-            <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/src/Form/CommentaireType.php</file>
-            <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/templates/menu.html.twig</file>
             <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/.env</file>
-            <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/templates/annonce/show.html.twig</file>
             <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/templates/security/login.html.twig</file>
             <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/assets/css/app.scss</file>
             <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/templates/annonce/index.html.twig</file>
-            <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/src/Controller/MembreController.php</file>
             <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/templates/base.html.twig</file>
-            <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/templates/annonce/new.html.twig</file>
-            <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/src/Form/AnnonceType.php</file>
-            <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/src/Entity/Annonce.php</file>
             <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/assets/js/app.js</file>
-            <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/src/Controller/SecurityController.php</file>
             <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/src/Entity/Membre.php</file>
             <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/templates/membre/_form.html.twig</file>
             <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/src/Entity/Categorie.php</file>
             <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/templates/commentaire/new.html.twig</file>
-            <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/src/Controller/CommentaireController.php</file>
             <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/src/Repository/AnnonceRepository.php</file>
-            <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/templates/membre/new.html.twig</file>
             <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/templates/membre/profil.html.twig</file>
             <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/src/Form/AjouterType.php</file>
             <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/templates/membre/_delete_form.html.twig</file>
+            <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/src/Repository/AlbumRepository.php</file>
+            <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/templates/annonce/annonceMembre.html.twig</file>
+            <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/config/packages/security.yaml</file>
+            <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/templates/annonce/_delete_form.html.twig</file>
+            <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/config/packages/doctrine.yaml</file>
+            <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/templates/registration/register.html.twig</file>
+            <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/templates/membre/edit.html.twig</file>
+            <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/src/Controller/AnnonceController.php</file>
+            <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/src/Controller/CategorieController.php</file>
+            <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/src/Form/CommentaireType.php</file>
+            <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/templates/menu.html.twig</file>
+            <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/templates/annonce/show.html.twig</file>
+            <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/src/Controller/MembreController.php</file>
+            <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/templates/annonce/new.html.twig</file>
+            <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/src/Form/AnnonceType.php</file>
+            <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/src/Entity/Annonce.php</file>
+            <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/src/Controller/SecurityController.php</file>
+            <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/src/Controller/CommentaireController.php</file>
+            <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/templates/membre/new.html.twig</file>
             <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/src/Form/CategorieType.php</file>
             <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/webpack.config.js</file>
             <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/src/Entity/Album.php</file>
-            <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/src/Repository/AlbumRepository.php</file>
             <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/src/Security/LoginFormAuthenticator.php</file>
             <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/templates/annonce/_form.html.twig</file>
             <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/templates/membre/show.html.twig</file>
             <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/templates/membre/index.html.twig</file>
             <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/src/Form/MembreType.php</file>
-            <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/config/packages/security.yaml</file>
             <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/src/Repository/MembreRepository.php</file>
-            <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/config/packages/doctrine.yaml</file>
             <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/templates/accueil/index.html.twig</file>
-            <file>file:/C:/Users/BenAmar/Desktop/Symfony/LeptitCoin/templates/registration/register.html.twig</file>
         </group>
     </open-files>
 </project-private>

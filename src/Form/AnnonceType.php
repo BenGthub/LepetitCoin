@@ -22,19 +22,19 @@ class AnnonceType extends AbstractType
         $builder
             ->add('titre',TextType::class, [ "constraints" => 
                                                     [ new Length([ "max" => 50,
-                                                                   "maxMessage" => "Le nom de l'auteur ne peut pas dépasser 20 caractères"
+                                                                   "maxMessage" => "Le texte ne peut pas dépasser 22 caractères"
                                                                  ]) 
                                                     ] 
                                                  ])
             ->add('description_courte',TextType::class, [ "constraints" => 
-                                                    [ new Length([ "max" => 200,
-                                                                   "maxMessage" => "Le nom de l'auteur ne peut pas dépasser 20 caractères"
+                                                    [ new Length([ "max" => 245,
+                                                                   "maxMessage" => "Le texte ne peut pas dépasser 25 caractères"
                                                                  ]) 
                                                     ] 
                                                  ])
             ->add('description_longue', TextType::class, [ "constraints" => 
-                                                    [ new Length([ "max" => 255,
-                                                                   "maxMessage" => "Le nom de l'auteur ne peut pas dépasser 20 caractères"
+                                                    [ new Length([ "max" => 800,
+                                                                   "maxMessage" => "Le nom de l'auteur ne peut pas dépasser 225 caractères"
                                                                  ]) 
                                                     ] 
                                                  ])

@@ -9,42 +9,54 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+
+        {% if is_granted("ROLE_ADMIN") %}
+            {#
+                            <li class="nav-item {{ app.request.pathinfo == path("annonce_index") ? "active" : "" }}">
+                                <a class="nav-link" href="{{ path("annonce_index") }}">Annonce </a>
+                            </li>#}
+
+            <div class=" dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    Gestion
+
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li class="nav-item {{ app.request.pathinfo == path("categorie_index") ? "active" : "" }}">
+                        <a class="nav-link" href="{{ path("categorie_index") }}">Categorie</a>
+                    </li>
+                    <li class="nav-item {{ app.request.pathinfo == path("membre_index") ? "active" : "" }}">
+                        <a class="nav-link" href="{{ path("membre_index") }}">Membre</a>
+                    </li>
+                </ul>
+            </div>             
+        {% endif %}
+
+
         <ul class="navbar-nav mr-auto">
-            {% if is_granted("ROLE_ADMIN") %}
-
-                <li class="nav-item {{ app.request.pathinfo == path("annonce_index") ? "active" : "" }}">
-                    <a class="nav-link" href="{{ path("annonce_index") }}">Annonce </a>
-                </li>
-                <li class="nav-item {{ app.request.pathinfo == path("categorie_index") ? "active" : "" }}">
-                    <a class="nav-link" href="{{ path("categorie_index") }}">Categorie</a>
-                </li>
-                <li class="nav-item {{ app.request.pathinfo == path("membre_index") ? "active" : "" }}">
-                    <a class="nav-link" href="{{ path("membre_index") }}">Membre</a>
-                </li>
-
-            {% endif %}
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ path("Page_Annonce") }}">
-                        Passer une Annonce   <i class="fa fa-sign-out-alt"> </i>
-                    </a>
-                </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path("Page_Annonce") }}">
+                    Passer une Annonce   <i class=""> </i>
+                </a>
+            </li>
             {% if is_granted("IS_AUTHENTICATED_FULLY") %}
-                                 <li class="nav-item ">
-                    <a class="nav-link" href=""> Mes Annonces en Ligne</a>
+                <li class="nav-item ">
+                    <a class="nav-link" href="{{ path("mesAnnonces") }}"> <i class="fas fa-glasses">Mes Annonces en Ligne</i></a>
                 </li>
                 <li class=" ">
-                    <a class="nav-link" href="{{ path("profil") }}">{{ app.user.username }} </a>
+                    <a class="nav-link" data-toggle="tooltip" title="Mon profil"href="{{ path("profil") }}">{{ app.user.username }} </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ path("app_logout") }}">
+                    <a class="nav-link" data-toggle="tooltip" title="Quitter la Session" href="{{ path("app_logout") }}">
                         <i class="fa fa-sign-out-alt"></i>
                     </a>
                 </li>
 
-       
 
-     {% else %}
+
+            {% else %}
                 <li class="nav-item {{ app.request.pathinfo == path("app_login") ? "active" : "" }}">
                     <a class="nav-link" href="{{ path("app_login") }}">
                         <i class="fa fa-sign-in-alt">Connexion</i>
@@ -61,10 +73,10 @@
             {% endif %}
         </ul>
 
-        {#<form class="form-inline my-2 my-lg-0" action="{{ path("recherche") }}">
-          <input class="form-control mr-sm-2" name="mot_recherche" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Recherche</button>
-        </form>#}
+        <form class="form-inline my-2 my-lg-0" action="{{ path("rechercher") }}">
+            <input class="form-control mr-sm-2" name="search_word" type="search" placeholder=" Categorie" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Recherche</button>
+        </form>
     </div>
 </nav>
 

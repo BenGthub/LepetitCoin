@@ -18,7 +18,28 @@
                 {% endfor %}
             </div>
         {% endfor %}
-        {% block body %}{% endblock %}
+        {% block body %}
+        
+                     <h1>Le Petit Coin</h1>
+                <div>
+                    <h2>Liste par Catégorie : {{ liste_categories|length }}</h2>
+                    {% if liste_categories|length %}                        
+                        <div class="card-columns">
+                            {# afficher la liste des categories #}
+                            {% for categorie in liste_categories %}
+                                {% include "annonce/vignette.html.twig" with { "categorie": categorie } %}
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        <div class="alert alert-warning">Aucune Categorie, ne correspond à votre recherche</div>
+                    {% endif %}
+                            
+                </div>
+        
+        
+        
+        
+        {% endblock %}
         
         {% block javascripts %}
             {{ encore_entry_script_tags("app") }}

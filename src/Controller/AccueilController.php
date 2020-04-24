@@ -29,4 +29,16 @@ class AccueilController extends AbstractController
     
         return $this->render("accueil/index.html.twig", compact("listeannonces"));
     }
+    
+    
+    /**
+     * @Route("/rechercher", name="rechercher")
+     */
+    
+    public function recherche(CategorieRepository $cr, Request $rq) {
+        $mot = $rq->query->get("search_word");
+        $liste_categories = $cr->motsCles($mot);
+        return $this->render("base.html.twig", compact("liste_categories"));
+        
+    }
 }

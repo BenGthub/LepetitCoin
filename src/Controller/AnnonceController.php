@@ -8,7 +8,9 @@ use App\Entity\Annonce;
 use App\Entity\Membre;
 use App\Form\AnnonceType;
 use App\Form\AjouterType;
+use App\Form\CategorieType;
 use App\Repository\AnnonceRepository;
+use App\Repository\MembreRepository;
 use App\Repository\CategorieRepository;
 use App\Repository\AlbumRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -17,6 +19,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Doctrine\ORM\EntityManagerInterface as EntityManager;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
+use Symfony\Component\HttpFoundation\Session\SessionInterface as Session;
 
 class AnnonceController extends AbstractController {
 
@@ -152,5 +155,20 @@ class AnnonceController extends AbstractController {
                     'form' => $formAjouter->createView(),
         ]);
     }
+
+    /**
+     * @Route("membre/mesAnnonces", name="mesAnnonces" , methods={"GET","POST"})
+     * 
+     */
+    public function mesAnnonces(MembreRepository $mr, Request $rq): Response {
+
+
+        return $this->render('annonce/annonceMembre.html.twig', [
+                    'annonces' => $mr->findAll(),
+                        ]
+        );
+    }
+    
+    
 
 }
